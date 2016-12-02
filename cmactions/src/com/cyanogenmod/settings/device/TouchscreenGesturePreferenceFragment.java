@@ -31,7 +31,6 @@ import android.text.TextUtils;
 import java.io.File;
 
 import org.cyanogenmod.internal.util.FileUtils;
-import org.cyanogenmod.internal.util.ScreenType;
 
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
@@ -106,7 +105,8 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-
+// If running on a phone, remove padding around the listview
+        getListView().setPadding(0, 0, 0, 0);
         if (mNotificationManager.isNotificationPolicyAccessGranted() && mFlipClick) {
             mFlipPref.setChecked(true);
         }
