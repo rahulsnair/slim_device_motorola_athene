@@ -1,3 +1,18 @@
 [
-
+  {
+    "repository":  "kernel_motorola_msm8952",
+    "target_path": "kernel/motorola/msm8952"
+  },
+  {
+    "repository":  "proprietary_vendor_motorola_athene"
+    "target_path" : "vendor/motorola"
+  },
+  {
+    "repository": "android_external_bson",
+    "target_path": "external/bson"
+  },
+  {
+    "repository": "android_external_stlport",
+    "target_path": "external/stlport"
+  }
 ]
